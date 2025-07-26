@@ -68,5 +68,7 @@ public class Person {
         personas.add(person2);
         System.out.println(personas);
 
+        System.out.println(personas.contains(person1));
+
     }
 }
