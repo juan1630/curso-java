@@ -1,10 +1,11 @@
-package com.juanpatron.estructurasdedatos.list.hashset;
+package com.juanpatron.estructurasdedatos.list.set.hashset.LinkedHashSet.set;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class Person {
+public class Person  {
 
 
     private String name;
@@ -19,8 +20,8 @@ public class Person {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return Objects.equals(dni, person.dni);
+        com.juanpatron.estructurasdedatos.list.set.hashset.Person person = (com.juanpatron.estructurasdedatos.list.set.hashset.Person) o;
+        return Objects.equals(dni, ((Person) o).dni);
     }
 
     @Override
@@ -38,11 +39,11 @@ public class Person {
     //equals compara si 2 objetos son iguales
 
     public static void main(String[] args) {
-        Set<Person> personas = new HashSet<>();
-        Person person1 = new Person("Maria", "123");
-        Person person2 = new Person("Ana", "456");
-        Person person3 = new Person("Ana2", "456");
-        Person person4 = null;
+        Set<com.juanpatron.estructurasdedatos.list.set.hashset.Person> personas = new HashSet<>();
+        com.juanpatron.estructurasdedatos.list.set.hashset.Person person1 = new com.juanpatron.estructurasdedatos.list.set.hashset.Person("Maria", "123");
+        com.juanpatron.estructurasdedatos.list.set.hashset.Person person2 = new com.juanpatron.estructurasdedatos.list.set.hashset.Person("Ana", "456");
+        com.juanpatron.estructurasdedatos.list.set.hashset.Person person3 = new com.juanpatron.estructurasdedatos.list.set.hashset.Person("Ana2", "456");
+        com.juanpatron.estructurasdedatos.list.set.hashset.Person person4 = null;
 
         //create
         personas.add(person1);
@@ -52,9 +53,9 @@ public class Person {
 
 
         //list
-        for( Person person : personas  ) {
+        for( com.juanpatron.estructurasdedatos.list.set.hashset.Person person : personas  ) {
             if(person != null) {
-                System.out.println(person.name);
+                System.out.println(person);
             }
 
         }

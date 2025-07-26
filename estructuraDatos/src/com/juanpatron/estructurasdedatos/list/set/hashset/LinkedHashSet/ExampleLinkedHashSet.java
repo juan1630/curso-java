@@ -1,11 +1,13 @@
-package com.juanpatron.estructurasdedatos.list.hashset;
+package com.juanpatron.estructurasdedatos.list.set.hashset.LinkedHashSet;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class main {
+public class ExampleLinkedHashSet {
     public static void main(String[] args) {
-        Set<Integer> numbers = new HashSet<>();
+        Set<Integer> numbers = new LinkedHashSet<>();
+
+        //El  hashSet y el LinkedHashSet implementa la misma interfaz que es Set
 
         numbers.add(10);
         numbers.add(20);
@@ -23,5 +25,9 @@ public class main {
         numbers.remove(60);
         numbers.add(90);
         System.out.println(numbers);
+
+        System.out.println(numbers.contains(1));
+        System.out.println(numbers.contains(30));
+
     }
 }
